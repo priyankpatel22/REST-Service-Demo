@@ -15,6 +15,13 @@ import javax.ws.rs.core.MediaType;
 import org.priyank.javabrains.messenger.model.Profile;
 import org.priyank.javabrains.messenger.service.ProfileService;
 
+/**
+ * 
+ * CURD Operation with REST messages on the profiles information 
+ * The URL will be as below
+ * 
+ * */
+
 @Path("/profiles")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)

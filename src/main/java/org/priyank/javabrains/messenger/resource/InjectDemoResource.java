@@ -9,6 +9,13 @@ import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.UriInfo;
 
+/**
+ * Demo of how to get other information from the HTTP message
+ * like HTTP Header information and the URI information
+ * Use of '@context' parameter annotation is used
+ * 
+ * */
+
 @Path("/injectdemo")
 @Consumes(MediaType.TEXT_PLAIN)
 @Produces(MediaType.TEXT_PLAIN)

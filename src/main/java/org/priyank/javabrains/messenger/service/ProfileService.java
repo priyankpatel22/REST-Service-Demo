@@ -8,6 +8,11 @@ import java.util.Map;
 import org.priyank.javabrains.messenger.database.DatabaseClass;
 import org.priyank.javabrains.messenger.model.Profile;
 
+/**
+ * 
+ * This class contains all the service methods related to user profiles
+ *  
+ * */
 public class ProfileService {
 	
 	private Map<String, Profile> profiles = new DatabaseClass().getProfiles();

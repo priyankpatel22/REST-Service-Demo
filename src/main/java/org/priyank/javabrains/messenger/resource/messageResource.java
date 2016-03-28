@@ -16,12 +16,29 @@ import javax.ws.rs.core.MediaType;
 import org.priyank.javabrains.messenger.model.Message;
 import org.priyank.javabrains.messenger.service.MessageService;
 
+
+/**
+ * 
+ * CURD Operation with REST messages on the message information 
+ * The URL will be as below
+ * 'http://localhost:8080/messenger/webapi/{any_message_infoamtion}'
+ * 
+ * */
+
 @Path("/messages")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class messageResource {
 	
 	MessageService messageService = new MessageService();
+	
+	/**
+	 * Use of HTTP GET method to access data
+	 * Also use of Bean Parameter passes in the URL to access particular information from the BEan class
+	 * Here the BEan class will contain all the Query Parameters
+	 * 
+	 * @param prameterBean - The bean will contain all the Query parameter Getters and Setters
+	 * */
 	
 	@GET
 	public List<Message> getMessage(@BeanParam PrameterBean prameterBean) {
@@ -57,6 +74,15 @@ public class messageResource {
 	public Message returnMessage(@PathParam("messageId") long messageId) {
 		return messageService.getMessage(messageId);
 	}
+	
+	/**
+	 * Very important method
+	 * How you forward information from message URL to comments for that particular message
+	 * e.g. URL: 'http://localhost:8080/messenger/webapi/messages/{any_comment_information}'
+	 * The method will instantiate Comment class object if any comment information is provided 
+	 * in the URL
+	 * 
+	 * */
 	
 	@GET
 	@Path("/{messageId}/coments")

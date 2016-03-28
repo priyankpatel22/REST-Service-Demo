@@ -5,6 +5,11 @@ import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
+/**
+ * Handled Exception
+ * 
+ * */
+
 import org.priyank.javabrains.messenger.model.ErrorMessage;
 
 @Provider
